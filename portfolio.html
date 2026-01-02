@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navegación principal -->
+    <nav class="navigation">
+        <a href="index.html" class="nav-logo">Sabrina Chmaili</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
+            <a href="portfolio.html" class="nav-link active">Portfolio</a>
+            <a href="contacto.html" class="nav-link">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="content page-content">
+        <h1>Portfolio</h1>
+        
+        <!-- Tarjetas de selección -->
+        <div class="portfolio-categories">
+            <a href="portfolio-modeling.html" class="portfolio-category-card">
+                <div class="category-card-content">
+                    <h2>MODELING</h2>
+                    <p>Explora mi trabajo como modelo</p>
+                </div>
+            </a>
+            <a href="portfolio-acting.html" class="portfolio-category-card">
+                <div class="category-card-content">
+                    <h2>ACTING</h2>
+                    <p>Descubre mis proyectos de actuación</p>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Sabrina Chmaili. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="politica-privacidad.html">Política de Privacidad</a>
+                <a href="politica-cookies.html">Política de Cookies</a>
+                <a href="derechos-imagen.html">Derechos de Imagen</a>
+                <a href="condiciones-uso.html">Condiciones de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para navbar con scroll -->
+    <script>
+    (function() {
+        const navigation = document.querySelector('.navigation');
+        if (!navigation) return;
+
+        function handleScroll() {
+            // Añadir clase 'scrolled' cuando el scroll sea mayor a 50px
+            // Puedes ajustar este valor (50) para cambiar el punto de inicio del fade
+            if (window.scrollY > 50) {
+                navigation.classList.add('scrolled');
+            } else {
+                navigation.classList.remove('scrolled');
+            }
+        }
+
+        // Ejecutar al cargar y al hacer scroll
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Verificar estado inicial
+    })();
+    </script>
+</body>
+</html>

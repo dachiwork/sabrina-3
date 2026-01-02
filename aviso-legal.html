@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso Legal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navegación principal -->
+    <nav class="navigation">
+        <a href="index.html" class="nav-logo">Sabrina Chmaili</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="contacto.html" class="nav-link">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="content page-content">
+        <div class="legal-content">
+            <h1>Aviso Legal</h1>
+            
+            <h2>Titular del sitio web</h2>
+            <p>
+                <strong>Sabrina Chmaili</strong> (Modelo / Actriz)<br>
+                Ciudad: Madrid, España<br>
+                Correo de contacto: <a href="mailto:sabrinachmaili.work@gmail.com">sabrinachmaili.work@gmail.com</a>
+            </p>
+
+            <h2>Objeto del sitio</h2>
+            <p>
+                Este sitio web tiene carácter personal y muestra el portafolio de Sabrina Chmaili. La información contenida en la web tiene fines exclusivamente informativos y de contacto profesional.
+            </p>
+
+            <h2>Responsabilidad</h2>
+            <p>
+                Sabrina Chmaili no se hace responsable de los daños o perjuicios derivados del acceso a contenidos de terceros a los que se pueda acceder a través de enlaces presentes en la web.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Sabrina Chmaili. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="politica-privacidad.html">Política de Privacidad</a>
+                <a href="politica-cookies.html">Política de Cookies</a>
+                <a href="derechos-imagen.html">Derechos de Imagen</a>
+                <a href="condiciones-uso.html">Condiciones de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para navbar con scroll -->
+    <script>
+    (function() {
+        const navigation = document.querySelector('.navigation');
+        if (!navigation) return;
+
+        function handleScroll() {
+            if (window.scrollY > 50) {
+                navigation.classList.add('scrolled');
+            } else {
+                navigation.classList.remove('scrolled');
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+    })();
+    </script>
+</body>
+</html>
+
