@@ -873,3 +873,68 @@ body.home-page::after {
     }
 }
 
+/* ============================================
+   PORTFOLIO VIDEOS - YOUTUBE EMBEDS
+   ============================================ */
+
+.portfolio-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.video-container {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    background: rgba(250, 248, 245, 0.4);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(180, 155, 120, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: rgba(180, 155, 120, 0.4);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Responsive para videos */
+@media (max-width: 768px) {
+    .portfolio-videos {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 30px;
+    }
+    
+    .video-container {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .portfolio-videos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
